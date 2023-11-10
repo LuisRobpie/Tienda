@@ -37,4 +37,11 @@ public class ProductoServicesimpl implements ProductoService{
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
+    //lista de productos utilizando un metodo Query
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> consultaQuery(double precioInf,
+            double precioSup){
+    return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
 }

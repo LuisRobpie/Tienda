@@ -42,7 +42,7 @@
                                 <div class="mb-3">
                                     <label for="categoria">[[#{producto.categoria}]]</label>
                                     <div class="form-floating">
-                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="categoria.idCategoria">
                                             <option th:each="c : ${categorias}" 
                                                     th:value = "${c.idCategoria}"
                                                     th:text = "${c.descripcion}"
